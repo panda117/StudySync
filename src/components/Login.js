@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div className="auth-container">
       <div className="auth-header">
-        <div className="logo">StudySync</div>
+        <img src="/logo.png" alt="StudySync Logo" className="logo-img-auth" />
         <Link to="/signup" className="auth-switch-btn">SIGN UP</Link>
       </div>
 

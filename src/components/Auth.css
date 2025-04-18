@@ -22,13 +22,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
+  /* Potentially add background/border if needed */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00bcd4;
+.logo-img-auth {
+  height: 40px;
+  width: auto;
 }
 
 .auth-switch-btn {

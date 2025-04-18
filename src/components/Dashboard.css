@@ -1,16 +1,4 @@
-.page-container {
-  display: flex;
-  min-height: 100vh;
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
-  height: 100vh;
-}
+/* Styles specific to Dashboard content */
 
 .welcome-section {
   margin-bottom: 3rem;
@@ -47,7 +35,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  /* Removed margin-bottom as it's handled by section spacing */
 }
 
 .metric-card {
@@ -70,6 +58,10 @@
   color: #00BCD4;
 }
 
+.features-section {
+  margin-bottom: 2rem; /* Add some bottom margin */
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -82,6 +74,10 @@
   color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space */
+  min-height: 180px; /* Give cards a minimum height */
 }
 
 .feature-icon {
@@ -97,44 +93,17 @@
 .feature-card p {
   font-size: 0.9rem;
   opacity: 0.9;
+  flex-grow: 1; /* Allow description to take up space */
 }
 
-/* General Scrollbar styling */
-.main-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.main-content::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-.main-content::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
-}
-
-.main-content::-webkit-scrollbar-thumb:hover {
-  background: #444;
-}
-
-/* Responsive adjustments for layout */
+/* Responsive adjustments for dashboard content */
 @media (max-width: 768px) {
-  .page-container {
-    flex-direction: column;
-  }
-
-  .main-content {
-    padding: 1rem;
-    height: auto;
-    overflow-y: visible;
-  }
-
   .welcome-section h1 {
     font-size: 2rem;
   }
 
   .metrics-grid,
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
   }
 } 

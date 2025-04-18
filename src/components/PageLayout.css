@@ -1,0 +1,49 @@
+.page-container { /* Renamed from .home-container */
+  display: flex;
+  flex-direction: row; /* Explicitly set direction */
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Sidebar styles are in Sidebar.css */
+
+.main-content {
+  flex: 1; /* Allows main content to take remaining space */
+  padding: 2rem;
+  overflow-y: auto; /* Enable scrolling for main content */
+  height: 100vh; /* Make main content viewport height to contain scrolling */
+}
+
+/* General Scrollbar styling for main content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Responsive adjustments for layout */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column; /* Stack on smaller screens */
+  }
+
+  /* Sidebar responsive adjustments are in Sidebar.css */
+
+  .main-content {
+    padding: 1rem;
+    height: auto; /* Allow content to determine height */
+    overflow-y: visible; /* Let the body scroll */
+  }
+} 

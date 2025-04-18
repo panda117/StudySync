@@ -54,55 +54,44 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 188, 212, 0.3);
-  backdrop-filter: blur(10px);
-  position: relative;
-  z-index: 1;
+  padding: 1rem 2rem;
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00bcd4;
-  text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
-}
-
-.nav-links {
+.header-buttons {
   display: flex;
   gap: 1rem;
 }
 
-.nav-button {
-  background: none;
-  border: none;
+.login-btn,
+.join-btn {
   padding: 0.5rem 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.nav-button:hover {
-  color: #00bcd4;
+.login-btn {
+  background-color: transparent;
+  border: 1px solid #00BCD4;
+  color: #00BCD4;
+}
+
+.login-btn:hover {
+  background-color: rgba(0, 188, 212, 0.1);
 }
 
 .join-btn {
-  background: linear-gradient(45deg, #00bcd4, #00a5b0);
-  color: #000;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+  background-color: #00BCD4;
+  border: 1px solid #00BCD4;
+  color: #0d1117;
 }
 
 .join-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+  background-color: #00a5b0;
+  border-color: #00a5b0;
 }
 
 /* Hero Section */
@@ -296,4 +285,18 @@ footer {
   padding: 2rem;
   background-color: #111;
   border-top: 1px solid #00bcd4;
+}
+
+/* Remove text .logo styles */
+/*
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00BCD4;
+}
+*/
+
+.logo-img-landing { /* Style for the landing page logo */
+  height: 40px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
 } 

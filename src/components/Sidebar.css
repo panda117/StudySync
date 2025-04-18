@@ -1,0 +1,154 @@
+.sidebar {
+  width: 280px;
+  background-color: #242424;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333;
+  /* Removed height/flex properties that belong in page layout */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo-img {
+  width: 180px;
+  height: auto;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #00BCD4;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.user-profile span {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1; /* Allows menu to grow and push logout btn down */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+.nav-item.active {
+  background-color: rgba(0, 188, 212, 0.2);
+  font-weight: 600;
+}
+
+.nav-item svg {
+  font-size: 1.25rem;
+  min-width: 20px; /* Ensure icons align */
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid #333;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  text-align: left;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 82, 82, 0.1);
+  border-color: rgba(255, 82, 82, 0.5);
+  color: #ff5252;
+}
+
+.logout-btn svg {
+   min-width: 20px; /* Ensure icons align */
+}
+
+/* Responsive adjustments if needed for sidebar specific things */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .user-profile {
+      margin-bottom: 1.5rem;
+      padding: 0.5rem;
+  }
+
+  .nav-menu {
+      flex-direction: row;
+      overflow-x: auto; /* Allow horizontal scrolling if needed */
+      flex: none; /* Don't grow */
+      padding-bottom: 0.5rem;
+  }
+
+  .nav-item {
+      width: auto;
+      padding: 0.5rem 0.75rem;
+  }
+
+  .nav-item span {
+      display: none; /* Optionally hide text on small screens */
+  }
+
+  .logout-btn {
+      margin-top: 1rem;
+      width: auto;
+      align-self: flex-start;
+  }
+} 

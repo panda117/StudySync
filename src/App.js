@@ -4,7 +4,10 @@ import './App.css';
 import LandingPage from './LandingPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import Summarize from './components/Summarize';
+import Research from './components/Research';
+import StudyPlanner from './components/StudyPlanner';
 
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
@@ -26,7 +29,31 @@ function App() {
           path="/home"
           element={
             <ProtectedRoute>
-              <Home />
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/summarize"
+          element={
+            <ProtectedRoute>
+              <Summarize />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/research"
+          element={
+            <ProtectedRoute>
+              <Research />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/planner"
+          element={
+            <ProtectedRoute>
+              <StudyPlanner />
             </ProtectedRoute>
           }
         />

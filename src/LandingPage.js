@@ -18,8 +18,11 @@ const LandingPage = () => {
     <div className="landing-container">
       {/* Header */}
       <header>
-        <div className="logo">StudySync</div>
-        <button className="join-btn" onClick={() => navigate('/signup')}>Join Now</button>
+        <img src="/logo.png" alt="StudySync Logo" className="logo-img-landing" />
+        <div className="header-buttons">
+          <button className="login-btn" onClick={() => navigate('/login')}>Log In</button>
+          <button className="join-btn" onClick={() => navigate('/signup')}>Join Now</button>
+        </div>
       </header>
 
       {/* Hero Section */}

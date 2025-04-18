@@ -9,10 +9,10 @@ import {
   FaClock,
 } from 'react-icons/fa';
 import Sidebar from './Sidebar'; // Import the Sidebar component
-import './PageLayout.css'; // Shared page layout styles (we will rename Home.css to this)
+import './PageLayout.css'; // Shared page layout styles
 import './Summarize.css'; // Specific styles for Summarize content
 
-const Summarize = () => { // Renamed from Home
+const Summarize = () => { 
   const [userName, setUserName] = useState('');
   const [inputText, setInputText] = useState('');
   const [summarizedText, setSummarizedText] = useState('');
@@ -38,12 +38,13 @@ const Summarize = () => { // Renamed from Home
 
   const handleSummarize = () => {
     // Placeholder for actual summarization logic
+    // In a real app, you'd call an API here
     setSummarizedText(`Summary of: "${inputText.substring(0, 50)}..."`); 
   };
 
   return (
-    <div className="page-container"> {/* Use a generic class like page-container */}
-      <Sidebar userName={userName} features={features} /> {/* Use the Sidebar component */}
+    <div className="page-container"> 
+      <Sidebar userName={userName} features={features} /> 
       
       <main className="main-content">
         <header className="summarize-header">
@@ -91,4 +92,4 @@ const Summarize = () => { // Renamed from Home
   );
 };
 
-export default Summarize; // Export Summarize 
+export default Summarize; // Ensure the default export is present 
