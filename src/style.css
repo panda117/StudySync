@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #555;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #22d3ee; /* cyan-400 */
+}
+
+button.join-btn {
+  background-color: #22d3ee;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero .gradient-box {
+  margin: 2rem auto;
+  width: 75%;
+  height: 15rem;
+  background: linear-gradient(to bottom, rgba(34, 211, 238, 0.2), transparent);
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px #22d3ee40;
+}
+
+.hero p {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.hero span {
+  color: #22d3ee;
+  font-weight: bold;
+}
+
+/* Grid Section */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+}
+
+.tool-box {
+  border: 2px solid white;
+  padding: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.3s;
+}
+
+.tool-box:hover {
+  box-shadow: 0 0 15px #22d3ee80;
+}
+
+/* Why Choose Section */
+.why-choose {
+  background-color: #1e1e1e;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.why-choose h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  flex: 1;
+}
+
+.feature-card.highlight {
+  background-color: #22d3ee;
+  color: black;
+}
+
+.feature-card h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #555;
+  color: #aaa;
+}
+
+/* Bottom Section */
+.bottom-cta {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.bottom-cta p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.bottom-cta .bold {
+  font-weight: bold;
+  font-size: 2rem;
+}
